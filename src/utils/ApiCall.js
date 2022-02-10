@@ -1,5 +1,5 @@
 const ApiCall = async (_path, _method, _body) => {
-    const response = await fetch("http://localhost:4000" + _path, {
+    const response = await fetch("https://lynx-messenger-server.herokuapp.com" + _path, {
         method: _method,
         headers: {
             'Content-Type': 'application/json',
