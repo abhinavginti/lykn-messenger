@@ -22,7 +22,7 @@ const LoginForm = () => {
             localStorage.LMIsLoggedIn = true;
             localStorage.token = data.user;
             localStorage.username = data.username;
-            window.location.reload()
+            window.location.replace('/')
         }
         else {
             messageBox1.current.innerHTML = data.error;
