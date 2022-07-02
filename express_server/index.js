@@ -71,12 +71,9 @@ app.post('/api/setMessage', async (req, res) => {
         console.log(req.body)
         const conversation = await Conversation.findOne({ members: { $all: [req.body.senderUsername, req.body.recieverUsername] } });
         if (!conversation) {
-            const conversationId = await createNewConversation(req.body.senderUsername, req.body.recieverUsername);
-            setMessage(conversationId, req.body.senderUsername, req.body.msg)
+            var conversationId = await createNewConversation(req.body.senderUsername, req.body.recieverUsername);
         }
-        else {
-            setMessage(conversation._id, req.body.senderUsername, req.body.msg)
-        }
+        setMessage(conversationId, req.body.senderUsername, req.body.msg)
         return res.json({ status: true })
     } catch (err) {
         console.log(err)
