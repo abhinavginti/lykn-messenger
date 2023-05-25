@@ -13,7 +13,7 @@ app.use(express.json())
 const port = process.env.PORT || 4000;
 
 //mongodb+srv://abhinavginti:eojay8VdTDhp96yP@cluster0.gbpfp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
-mongoose.connect('mongodb+srv://abhinavginti:M6zbRmxaivDmDZap@lykn.kag242q.mongodb.net/?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true }).then(() => {
+mongoose.connect('mongodb+srv://abhinav:cOMIfoaahSyM0m7t@lykn.kag242q.mongodb.net/?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true }).then(() => {
     console.log('Connection Successful')
 }).catch((err) => console.log(err))
 
