@@ -5,7 +5,7 @@ export const SocketContext = createContext();
 export const SocketProvider = ({ children }) => {
     const socket = useRef();
     useEffect(() => {
-        socket.current = io("https://lyknmessenger-socket-server.herokuapp.com")
+        socket.current = io("https://lykn-messenger-socket.vercel.app")
         console.log(socket.current)
     }, [])
     return <SocketContext.Provider value={{ socket }}>
