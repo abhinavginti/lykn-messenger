@@ -1,5 +1,5 @@
 const ApiCall = async (_path, _method, _body) => {
-    const response = await fetch("https://lykn-messenger-apb5.vercel.app" + _path, {
+    const response = await fetch("https://lykn-messenger.vercel.app" + _path, {
         method: _method,
         headers: {
             'Content-Type': 'application/json',
